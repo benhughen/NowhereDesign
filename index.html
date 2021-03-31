@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<TITLE>NOW HERE, NOWHERE</TITLE>
+	<link rel="stylesheet" type="text/css" href="sty.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+#bod{
+  box-sizing: content-box;
+  padding: -1px;
+}
+
+#i1{
+	position: absolute;
+	cursor: ;
+	display: inline;
+	z-index: 1;
+}
+#i2{
+	position: relative;
+	cursor: ;
+	
+	z-index: 2;
+}
+#i3{
+	position: relative;
+	cursor: ;
+	z-index: 3;
+}
+#i4{
+	position: relative;
+	cursor: ;
+	
+	z-index: 4;
+}
+
+#i5{
+	position: relative;
+	cursor: ;
+	
+	z-index: 5;
+}
+#i6{
+	position: relative;
+	cursor: ;
+
+	z-index: 6;
+}
+#i7{
+	position: relative;
+	cursor: ;
+
+	z-index: 7;
+}
+#i8{
+	position: relative;
+	cursor: ;
+
+	z-index: 8;
+}
+#i9{
+	position: relative;
+	cursor: ;
+
+	z-index: 9;
+}
+
+#i10{
+	position: relative;
+	cursor: ;
+
+	z-index: 10;
+}
+#i11{
+	position: relative;
+	cursor: ;
+
+	z-index: 10;
+}
+
+
+</style>
+
+</head>
+
+<body id="bod" class="d">
+
+	<img  id="i11" class="head" src="head.gif">
+
+
+<div class="row" >
+  <div class="column1" style="background-color:black">
+  	<div class="c">
+  		<img class="static" id="i1" src="a.png">
+  		<img class="active"src="Comp_4.gif">
+  	</div>
+    <img class="a" id="i2" src="tx2.png">
+  	<div class=c>
+  		<img class="static" id="i1" src="a2.png">
+  		<img class="active"src="a2.gif">
+  		
+  		
+  	</div>
+  	<img class="a" id="i4" src="tx4.png">
+  	<div class=c>
+  		<img class="static" id="i1" src="a3.png">
+  		<img class="active"src="a3.gif">
+  	</div>
+  	<img class="b" src="a7.png">
+  	 	<div class=c>
+  		<img class="static" id="i1" src="passive.png">
+  		<img class="active"src="pass1.gif">
+  	</div>
+  	<div class=c>
+  		<img class="static" id="i1" src="a10.png">
+  		<img class="active"src="a10.gif">
+  	</div>
+  	<video class="vid" autoplay muted loop id="myVideo">
+  <source src="fire eyes.mp4" type="video/mp4">
+	</video>
+  	<div class=c>
+  		<img class="static" id="i1" src="cup.png">
+  		<img class="active"src="cup.gif">
+  	</div>
+  		<div class=c>
+  		<img class="static" id="i1" src="a12.png">
+  		<img class="active"src="a12.gif">
+  	</div>
+  	<img class="b" src="tx7.png">
+  	<div class=c>
+  		<img class="static" id="i1" src="a13.png">
+  		<img class="active"src="a13.gif">
+  	</div>
+	<img class="b" src="ag1.png">
+  	<img class="b" src="tx9.png">
+</div>
+  	
+    
+  </div>
+  <div class="column2" style="background-color:white;">
+ 	<img class="b" id="i6" src="tx.png">
+  	<div class=c>
+  		<img class="static" id="i1" src="a4.png">
+  		<img class="active"src="a4.gif">
+  	</div>
+  	<img class="b" id="i8" src="tx3.png">
+ 	<div class=c>
+  		<img class="static" id="i1" src="a5.png">
+  		<img class="active"src="a5.gif">
+  	</div>
+  	<img class="b" src="tx5.png">
+  	<div class=c>
+  		<img class="static" id="i1" src="a6.png">
+  		<img class="active"src="a6.gif">
+  	</div>
+  	<img class="b" src="a7b.png">
+  	 <div class=c>
+  		<img class="static" id="i1" src="passive2.png">
+  		<img class="active"src="pass2.gif">
+  	</div>
+  	<div class=c>
+  		<img class="static" id="i1" src="a8.png">
+  		<img class="active"src="a8.gif">
+  	</div>
+  	 <video class="vid" autoplay muted loop id="myVideo">
+  <source src="cam head.mp4" type="video/mp4">
+	</video>
+	<div class=c>
+  		<img class="static" id="i1" src="a11.png">
+  		<img class="active"src="a11.gif">
+  	</div>
+  	<img class="b" src="tx6.png">
+  		<div class=c>
+  		<img class="static" id="i1" src="a14.png">
+  		<img class="active"src="a14.gif">
+  	</div>
+	<img class="b" src="ag2.png">
+	<img class="b" src="a16.png">
+	<img class="b" src="tx10.png">
+</div>
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("i11"));
+
+function dragElement(elmnt) {
+  var pos1 = 100, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "h1")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "h1").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+</script>
+
+</body>
+</html>
